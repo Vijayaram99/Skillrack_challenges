@@ -1,0 +1,14 @@
+n=int(input())
+a=input().split()
+a=a[::-1]
+k=""
+if n!=10:
+    for i in range(len(a)):
+        if a[i][len(a[i])-1]=='0':
+            k=a[i]
+            break
+        else:
+            k=a[i]
+    print(k)
+else:
+    print("2")
