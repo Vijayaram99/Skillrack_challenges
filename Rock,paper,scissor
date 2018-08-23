@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+int n,a=0,b=0,i;
+cin>>n;
+string s[n],s1[n];
+for(i=0;i<n;i++){
+    cin>>s[i]>>s1[i];
+}
+for(i=0;i<n;i++){
+    if(s[i]==s1[i]){
+        continue;
+    }else{
+        if(s[i]=="rock" && s1[i]=="paper"){
+            b++;
+        }
+        if(s[i]=="rock" && s1[i]=="scissors"){
+            a++;
+        }
+        if(s[i]=="paper" && s1[i]=="rock"){
+            a++;
+        }
+        if(s[i]=="scissors" && s1[i]=="rock"){
+            b++;
+        }
+        if(s[i]=="paper" && s1[i]=="scissors"){
+            b++;
+        }
+        if(s[i]=="scissors" && s1[i]=="paper"){
+            a++;
+        }
+    }
+}
+if(a>b){
+    cout<<"1";
+}
+else if(a<b){
+    cout<<"2";
+}
+else{
+    cout<<"Tie";
+}
+}
