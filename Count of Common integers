@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+int i,j,n,k=0,d=0,z=0,f=0,w=0,x=0,m=0;
+cin>>n;
+int a[n][n],b[10000000],c[100000];
+for(i=1;i<=n;i++){
+    for(j=1;j<=n;j++){
+        cin>>a[i][j];
+    }
+}
+if(n%2==0){
+    w=(n)/2;
+    x=w+1;
+}else{
+    w=(n/2)+1;
+    x=w;
+}
+for(i=1;i<=w;i++){
+    for(j=x;j<=n;j++){
+        k++;
+        b[k]=a[i][j];
+    }
+}
+for(i=x;i<=n;i++){
+    for(j=1;j<=w;j++){
+        d++;
+        c[d]=a[i][j];
+    }
+}
+for(i=1;i<=k;i++){
+    f=0;
+    for(j=1;j<=d;j++){
+        if(b[i]==c[j] && f==0){
+            z++;
+            c[j]=19999999;
+            f=1;
+        }
+    }
+}
+cout<<z;
+}
