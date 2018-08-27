@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+int r,c,i,j,f=0,m=0,n=0;
+cin>>r>>c;
+char a[r][c],b;
+for(i=0;i<r;i++){
+    for(j=0;j<c;j++){
+        cin>>a[i][j];
+    }
+}
+cin>>b;
+if(b=='l' || b=='L'){
+    for(i=0;i<r;i++){
+        f=0;
+        for(j=0;j<c;j++){
+            if(a[i][j]!='-' && f==0){
+                cout<<a[i][j];
+                f=1;
+            }
+        }
+    }
+}else{
+    for(i=0;i<r;i++){
+        f=0;
+        for(j=c-1;j>=0;j--){
+            if(a[i][j]!='-' && f==0){
+                cout<<a[i][j];
+                f=1;
+            }
+        }
+    }
+}
+}
