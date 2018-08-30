@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+int i,j,r,c,k=0,m=0,z=0;
+cin>>r>>c;
+int a[r][c],b[10000000];
+for(i=0;i<r;i++){
+    for(j=0;j<c;j++){
+        cin>>a[i][j];
+    }
+}
+for(j=0;j<c;j++){
+    for(i=0;i<r;i++){
+        b[k]=a[i][j];
+        k++;
+    }
+    b[k]=-1;
+    k++;
+}
+for(i=0;i<k;i++){
+    if(b[i]==1){
+        m++;
+    }else{
+        if(m>1){
+            z++;
+        }
+        m=0;
+    }
+}
+cout<<z;
+}
