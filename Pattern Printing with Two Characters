@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+string s;
+int n,i,count=0,d=-1,k=0;
+cin>>n>>s;
+for(i=1;i<=n;i++){
+    count=0;
+    d=d+2;
+    while(count<d){
+        cout<<s[k];
+        count++;
+        if(k==0){
+            k=1;
+        }else{
+            k=0;
+        }
+    }
+    cout<<"\n";
+}
+}
