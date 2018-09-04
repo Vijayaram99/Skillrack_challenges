@@ -1,0 +1,11 @@
+n=int(input())
+a=[]
+a.append(1)
+a.append(1)
+k,m=1,1
+for i in range(2,n):
+    k=k*2
+    m=m*3
+    a.append(k)
+    a.append(m)
+print(a[n-1])
