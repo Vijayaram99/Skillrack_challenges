@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+int n,i;
+cin>>n;
+string s[n],s1[n],z;
+for(i=0;i<n;i++){
+    cin>>s[i]>>s1[i];
+}
+cin>>z;
+for(i=0;i<n;i++){
+    if(s1[i]==z){
+        cout<<s[i]<<"\n";
+    }
+}
+}
