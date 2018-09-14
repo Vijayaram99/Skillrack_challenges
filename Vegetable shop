@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include <stdlib.h>
+int main()
+{
+int a,b,c,d,bal,sum=0;
+scanf("%d %d %d %d",&a,&b,&c,&d);
+scanf("%d",&bal);
+sum=a+b*2+c*5+d*10;
+if(sum==bal){
+    printf("Paid");
+}else{
+    if(sum>bal){
+        printf("Paid %d",sum-bal);
+    }else{
+        printf("Not Paid %d",sum);
+    }
+}
+}
